@@ -74,12 +74,12 @@ function draw(){
     //red mushroom with white dots 
   } else {
     // do something here if the mouse is NOT pressed
-   //cap 
- fill(255, 0, 0); //red 
+ //cap 
+ fill(red); //red 
  noStroke();
  arc(x, y +25, 100, 100, PI, TWO_PI); // semi-circle 
 
- // dots with outline 
+// dots with outline 
  fill(white); // dot fill
  stroke(black); // outline
  strokeWeight(0.5);
