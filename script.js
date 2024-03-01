@@ -7,8 +7,8 @@
 // Global Variables go here
 var black = 0;
 var white = 255;
-var red = [255, 0, 0]; //red
-var yellow  = [255, 255, 255];
+var r = [255, 0, 0]; //red
+var yellow  = [255, 255, 150];
 var x, y;
 
 function setup(){
@@ -48,9 +48,8 @@ function draw(){
     ellipse(120, 90, 10, 10);
     ellipse(90, 120, 10, 10); 
 
-   
     //cap 
-    fill(red);
+    fill(r);
     noStroke();
     arc(x, y +25, 100, 100, PI, TWO_PI); // semi-circle 
 
@@ -75,11 +74,11 @@ function draw(){
   } else {
     // do something here if the mouse is NOT pressed
  //cap 
- fill(red); //red 
+ fill(r); //red 
  noStroke();
  arc(x, y +25, 100, 100, PI, TWO_PI); // semi-circle 
 
-// dots with outline 
+ // dots with outline 
  fill(white); // dot fill
  stroke(black); // outline
  strokeWeight(0.5);
@@ -98,8 +97,8 @@ function draw(){
  fill(white);
  stroke(black); //outline
  strokeWeight(1.2);
- rect(x - 13, 25 + y, 30, 70);
-    
+ rect(x - 13, 25 + y, 30, 70);  
+
   }
 
 } // end of draw function
