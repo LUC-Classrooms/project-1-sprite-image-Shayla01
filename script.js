@@ -5,11 +5,14 @@
 //* Date: Feb, 25th 
 
 // Global Variables go here
-var black = 0;
-var white = 255;
+var black = 0; //black
+var white = 255; //white
 var r = [255, 0, 0]; //red
-var yellow  = [255, 255, 150];
+var yellow  = [255, 255, 150]; //yellow
 var x, y;
+var angle = 0
+let direction = 1; // movement of the mushroom 
+
 
 function setup(){
   // this function will run once
@@ -17,7 +20,6 @@ function setup(){
   x = width/2;
   y = height/2;
  translate (x,y);
-
 }
 
 function draw(){
@@ -48,19 +50,19 @@ function draw(){
     ellipse(120, 90, 10, 10);
     ellipse(90, 120, 10, 10); 
 
-    //cap 
-    fill(r);
-    noStroke();
+    //red cap 
+    fill(r); //red fill 
+    noStroke(); //no outline
     arc(x, y +25, 100, 100, PI, TWO_PI); // semi-circle 
 
-    //stem
-    fill(yellow);
-    stroke(black);
+    //yellow stem
+    fill(yellow); //yellow fill 
+    stroke(black); //black outline
     strokeWeight(1.2);
     rect(x - 13, 25 + y, 30, 70);
 
     //vertical lines on stem 
-    stroke(black);
+    stroke(black); // black outline 
     strokeWeight(0.7);
     line(x - 10, 25 + y, x - 10, 95 + y); 
     line(x - 6, 25 + y, x - 6, 95 + y);
@@ -69,16 +71,23 @@ function draw(){
     line(5 + x, 25 + y, 5 + x, 95 + y);
     line(9 + x, 25 + y, 9 + x, 95 + y); 
     line (13 + x, 25 +y, 13 + x, 95 + y);
+    
+   //mushroom moves horoznally across the canvas 
+   x += 2 *direction;
+   // reverse direction when the mushroom reaches the end 
+   if (x >= width - 50 || x <= 50) {
+   direction *= -1; 
+   } // end of movement 
 
     //red mushroom with white dots 
   } else {
     // do something here if the mouse is NOT pressed
- //cap 
- fill(r); //red 
- noStroke();
+ //red cap 
+ fill(r); //red fill
+ noStroke(); //no outline
  arc(x, y +25, 100, 100, PI, TWO_PI); // semi-circle 
 
- // dots with outline 
+ //white dots with outline 
  fill(white); // dot fill
  stroke(black); // outline
  strokeWeight(0.5);
@@ -86,18 +95,18 @@ function draw(){
  ellipse(20 + x, y - 6, 10, 10);
  ellipse(x, 10 + y, 10, 10);
  
- //smaller dots with outline 
+ //smaller white dots with outline 
  fill(white); //fill 
  stroke(black); //outline
  strokeWeight(0.5);
  ellipse (x - 32 , 13 + y, 6, 6);
  ellipse(30 + x , 15 + y, 6, 6);
   
- //stem 
- fill(white);
+ //white stem 
+ fill(white); //white fill 
  stroke(black); //outline
  strokeWeight(1.2);
- rect(x - 13, 25 + y, 30, 70);  
+ rect(x - 13, 25 + y, 30, 70); 
 
   }
 
@@ -109,4 +118,5 @@ function draw(){
 */
 function mousePressed(){
   // add code here if you want something to execute once each time the mouse is pressed
+
 }
