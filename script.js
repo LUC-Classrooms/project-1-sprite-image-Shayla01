@@ -2,7 +2,7 @@
 //* Project 1 - Interactive Image
 // * Name: Shayla SalvatoriShayla Salvatori
 //* Comments: White mushroom with red top and white spots Red Mushroom with White Dots 
-//* Date: Feb, 12th 
+//* Date: Feb, 25th 
 
 // Global Variables go here
 var black = 0;
