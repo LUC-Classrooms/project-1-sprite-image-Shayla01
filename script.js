@@ -1,7 +1,7 @@
 //**
 //* Project 1 - Interactive Image
 // * Name: Shayla SalvatoriShayla Salvatori
-//* Comments: White mushroom with red top and white spots Red Mushroom with White Dots, press the mouse for the mushroom to change to a yellow stem with black vertical lines, no dots on the cap, and move horozontally back and fourth on the canvas. 
+//* Comments: White mushroom with red top and white spots, press the mouse for the mushroom to change to a yellow stem with black vertical lines, no dots on the cap, and move horozontally back and fourth on the canvas. 
 //* Date: Feb, 25th 
 
 // Global Variables go here
@@ -25,7 +25,6 @@ function setup(){
 function draw(){
   // this function runs again and again (60x per second)
   background(g); //light green background 
-
 
 /*
   Use the following if()...else() structure to incorporate mouse click control of your animation
@@ -92,7 +91,7 @@ function draw(){
  strokeWeight(1.2);
  rect(x - 13, 25 + y, 30, 70); //stem 
 
-  } //end of else function 
+ } //end of else function 
 
 } // end of draw function
 
