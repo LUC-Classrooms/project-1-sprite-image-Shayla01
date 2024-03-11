@@ -9,6 +9,7 @@ var black = 0; //black
 var white = 255; //white
 var r = [255, 0, 0]; //red
 var yellow  = [255, 255, 150]; //yellow
+var g = [144, 238, 144] //light green 
 var x, y;
 let direction = 1; // movement of the mushroom 
 
@@ -23,32 +24,16 @@ function setup(){
 
 function draw(){
   // this function runs again and again (60x per second)
-  background(200); //light gray background
-//stem 
- fill (255);
- stroke (0); 
- strokeWeight (2);
- rect(90,100,20,100);
-
- //cap 
- fill(255, 0, 0); // red 
- noStroke();
- arc(100, 100, 80, 80, PI, TWO_PI); // semi circle 
+  background(g); //light green background 
 
 
 /*
   Use the following if()...else() structure to incorporate mouse click control of your animation
 */
-
   //yellow mushroom with vertical black lines 
   if(mouseIsPressed){
     //check each frame to see if the mouse is pressed, then do something
-    //white spots that appear on the cap 
-    fill (255); 
-    ellipse (80, 80, 10, 10);
-    ellipse(120, 90, 10, 10);
-    ellipse(90, 120, 10, 10); 
-
+   
     //red cap 
     fill(r); //red fill 
     noStroke(); //no outline
@@ -117,5 +102,4 @@ function draw(){
 */
 function mousePressed(){
   // add code here if you want something to execute once each time the mouse is pressed
-
 }
