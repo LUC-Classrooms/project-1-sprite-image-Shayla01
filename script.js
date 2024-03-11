@@ -52,24 +52,24 @@ function draw(){
     //red cap 
     fill(r); //red fill 
     noStroke(); //no outline
-    arc(x, y +25, 100, 100, PI, TWO_PI); // semi-circle 
+    arc(x, y +25, 100, 100, PI, TWO_PI); // semi-circle cap  
 
     //yellow stem
     fill(yellow); //yellow fill 
     stroke(black); //black outline
     strokeWeight(1.2);
-    rect(x - 13, 25 + y, 30, 70);
+    rect(x - 13, 25 + y, 30, 70); //stem 
 
     //vertical lines on stem 
     stroke(black); // black outline 
     strokeWeight(0.7);
-    line(x - 10, 25 + y, x - 10, 95 + y); 
-    line(x - 6, 25 + y, x - 6, 95 + y);
-    line(x - 2, 25 + y, x - 2, 95 + y); 
-    line(1.5 + x, 25 + y, 1.5 + x, 95 + y);
-    line(5 + x, 25 + y, 5 + x, 95 + y);
-    line(9 + x, 25 + y, 9 + x, 95 + y); 
-    line (13 + x, 25 +y, 13 + x, 95 + y);
+    line(x - 10, 25 + y, x - 10, 95 + y); //first line on stem 
+    line(x - 6, 25 + y, x - 6, 95 + y); // second line on stem 
+    line(x - 2, 25 + y, x - 2, 95 + y); //third line on stem 
+    line(1.5 + x, 25 + y, 1.5 + x, 95 + y); //fourth line on stem 
+    line(5 + x, 25 + y, 5 + x, 95 + y); //fifth line on stem 
+    line(9 + x, 25 + y, 9 + x, 95 + y); //sixth line on stem 
+    line (13 + x, 25 +y, 13 + x, 95 + y); //seventh line on stem 
     
    //* mushroom moves horoznally across the canvas 
    x += 2 *direction;
@@ -84,14 +84,14 @@ function draw(){
  //red cap 
  fill(r); //red fill
  noStroke(); //no outline
- arc(x, y +25, 100, 100, PI, TWO_PI); // semi-circle 
+ arc(x, y +25, 100, 100, PI, TWO_PI); // semi-circle cap 
 
- //white dots with outline 
+ // larger white dots with outline 
  fill(white); // dot fill
  stroke(black); // outline
  strokeWeight(0.5);
- ellipse (x - 23, y - 5, 10, 10);
- ellipse(20 + x, y - 6, 10, 10);
+ ellipse (x - 23, y - 5, 10, 10); 
+ ellipse(20 + x, y - 6, 10, 10); 
  ellipse(x, 10 + y, 10, 10);
  
  //smaller white dots with outline 
@@ -105,7 +105,7 @@ function draw(){
  fill(white); //white fill 
  stroke(black); //outline
  strokeWeight(1.2);
- rect(x - 13, 25 + y, 30, 70); 
+ rect(x - 13, 25 + y, 30, 70); //stem 
 
   } //end of else function 
 
