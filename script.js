@@ -1,7 +1,7 @@
 //**
 //* Project 1 - Interactive Image
 // * Name: Shayla SalvatoriShayla Salvatori
-//* Comments: White mushroom with red top and white spots Red Mushroom with White Dots 
+//* Comments: White mushroom with red top and white spots Red Mushroom with White Dots, press the mouse for the mushroom to change to a yellow stem with black vertical lines, no dots on the cap, and move horozontally back and fourth on the canvas. 
 //* Date: Feb, 25th 
 
 // Global Variables go here
@@ -10,7 +10,6 @@ var white = 255; //white
 var r = [255, 0, 0]; //red
 var yellow  = [255, 255, 150]; //yellow
 var x, y;
-var angle = 0
 let direction = 1; // movement of the mushroom 
 
 
@@ -72,14 +71,14 @@ function draw(){
     line(9 + x, 25 + y, 9 + x, 95 + y); 
     line (13 + x, 25 +y, 13 + x, 95 + y);
     
-   //mushroom moves horoznally across the canvas 
+   //* mushroom moves horoznally across the canvas 
    x += 2 *direction;
-   // reverse direction when the mushroom reaches the end 
+   //* reverse direction when the mushroom reaches the end 
    if (x >= width - 50 || x <= 50) {
    direction *= -1; 
    } // end of movement 
 
-    //red mushroom with white dots 
+  //red mushroom with white dots 
   } else {
     // do something here if the mouse is NOT pressed
  //red cap 
@@ -108,7 +107,7 @@ function draw(){
  strokeWeight(1.2);
  rect(x - 13, 25 + y, 30, 70); 
 
-  }
+  } //end of else function 
 
 } // end of draw function
 
